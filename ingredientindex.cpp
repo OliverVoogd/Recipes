@@ -15,6 +15,30 @@ void IngredientIndex::loadFile(QString dir) {
     QTextStream in(&file);
 
     // process the file stream
-    QMessageBox::information(parent, "TODO", "Implement index process");
+    QString line;
+    int i = 0;
+    while (!in.atEnd()) {
+        in.readLineInto(&line);
+
+        QStringList ingList = line.split(',');
+        if (ingList.size() != 2) {
+            QMessageBox::critical(parent, "Error", "Cannot read index file: " + filename);
+            return;
+        }
+
+        Ingredient ing{ingList[0], ingList[1], i++};
+        ingredients.push_back(ing);
+    }
+
     file.close();
+}
+
+const QString IngredientIndex::getPlainText() const {
+    QString out;
+
+    for (const auto ing : ingredients) {
+        out += ing.name + "," + ing.unit + "\n";
+    }
+
+    return out;
 }

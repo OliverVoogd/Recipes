@@ -35,7 +35,7 @@ public:
     QPushButton *btnOpenDir;
     QSpacerItem *horizontalSpacer;
     QLabel *indexLabel;
-    QPlainTextEdit *indexFileTextEdit;
+    QPlainTextEdit *txtIndexFile;
     QHBoxLayout *horizontalLayout;
     QPushButton *btnSaveIndex;
     QWidget *RecipeView;
@@ -45,7 +45,7 @@ public:
     QPushButton *btnOpenRecipe;
     QSpacerItem *horizontalSpacer_2;
     QLabel *indexLabel_2;
-    QPlainTextEdit *indexFileTextEdit_2;
+    QPlainTextEdit *txtRecipeFile;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *btnSaveRecipe;
     QWidget *ShoppingView;
@@ -87,10 +87,10 @@ public:
 
         verticalLayout->addWidget(indexLabel);
 
-        indexFileTextEdit = new QPlainTextEdit(verticalLayoutWidget);
-        indexFileTextEdit->setObjectName("indexFileTextEdit");
+        txtIndexFile = new QPlainTextEdit(verticalLayoutWidget);
+        txtIndexFile->setObjectName("txtIndexFile");
 
-        verticalLayout->addWidget(indexFileTextEdit);
+        verticalLayout->addWidget(txtIndexFile);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
@@ -130,10 +130,10 @@ public:
 
         verticalLayout_2->addWidget(indexLabel_2);
 
-        indexFileTextEdit_2 = new QPlainTextEdit(verticalLayoutWidget_2);
-        indexFileTextEdit_2->setObjectName("indexFileTextEdit_2");
+        txtRecipeFile = new QPlainTextEdit(verticalLayoutWidget_2);
+        txtRecipeFile->setObjectName("txtRecipeFile");
 
-        verticalLayout_2->addWidget(indexFileTextEdit_2);
+        verticalLayout_2->addWidget(txtRecipeFile);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");

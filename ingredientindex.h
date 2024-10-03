@@ -5,9 +5,9 @@
 #include <QWidget>
 
 struct Ingredient {
-    const QString name;
-    const QString unit;
-    const int index;
+    QString name;
+    QString unit;
+    int index;
 };
 
 class IngredientIndex
@@ -20,7 +20,7 @@ public:
 
     const Ingredient &operator[](qsizetype index) const { return ingredients[index]; }
 
-    const QString getPlainText();
+    const QString getPlainText() const;
     void loadFile(QString filename);
 private:
     QWidget *parent;

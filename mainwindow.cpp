@@ -22,7 +22,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::openWorkingDir() {
     QString dir = QFileDialog::getExistingDirectory(this, "Open Directory",
-                                                    "/home",
+                                                    R"(D:\Windows\ProgrammingOffline\QT)",
                                                     QFileDialog::ShowDirsOnly
                                                         | QFileDialog::DontResolveSymlinks);
 
@@ -30,6 +30,8 @@ void MainWindow::openWorkingDir() {
         workingDir = dir;
 
         index.loadFile(workingDir);
+
+        ui->txtIndexFile->setPlainText(index.getPlainText());
     }
 }
 
