@@ -1,0 +1,25 @@
+# ninja log v6
+9	163	7496177635930623	Recipes_autogen/timestamp	6dc5aa8c9a758cbb
+9	163	7496177635930623	Recipes_autogen/mocs_compilation.cpp	6dc5aa8c9a758cbb
+164	2117	7496177636520608	CMakeFiles/Recipes.dir/Recipes_autogen/mocs_compilation.cpp.obj	9b90ddf28cdde803
+9	163	7496177635930623	D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/timestamp	6dc5aa8c9a758cbb
+9	163	7496177635930623	D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/mocs_compilation.cpp	6dc5aa8c9a758cbb
+167	2155	7496177636550970	CMakeFiles/Recipes.dir/main.cpp.obj	b1cf07a1f5aa09e4
+169	2984	7496177636580598	CMakeFiles/Recipes.dir/mainwindow.cpp.obj	6b63e9a7be3e1be8
+2984	3398	7496177664730607	Recipes.exe	860089149b190650
+33	1418	7496255744028465	Recipes_autogen/timestamp	6dc5aa8c9a758cbb
+33	1418	7496255744028465	Recipes_autogen/mocs_compilation.cpp	6dc5aa8c9a758cbb
+33	1418	7496255744028465	D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/timestamp	6dc5aa8c9a758cbb
+33	1418	7496255744028465	D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/mocs_compilation.cpp	6dc5aa8c9a758cbb
+1589	3918	7496255746316098	CMakeFiles/Recipes.dir/main.cpp.obj	b1cf07a1f5aa09e4
+1419	3930	7496255744608030	CMakeFiles/Recipes.dir/Recipes_autogen/mocs_compilation.cpp.obj	9b90ddf28cdde803
+1594	3947	7496255746366128	CMakeFiles/Recipes.dir/ingredientindex.cpp.obj	c64bdd6cd2374dd
+1592	4477	7496255746336132	CMakeFiles/Recipes.dir/mainwindow.cpp.obj	6b63e9a7be3e1be8
+4477	5638	7496255775194643	Recipes.exe	bb5eec1179a98088
+16	165	7496257208351929	Recipes_autogen/timestamp	6dc5aa8c9a758cbb
+16	165	7496257208351929	Recipes_autogen/mocs_compilation.cpp	6dc5aa8c9a758cbb
+16	165	7496257208351929	D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/timestamp	6dc5aa8c9a758cbb
+16	165	7496257208351929	D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/mocs_compilation.cpp	6dc5aa8c9a758cbb
+169	2406	7496257209881884	CMakeFiles/Recipes.dir/ingredientindex.cpp.obj	c64bdd6cd2374dd
+166	2982	7496257209851885	CMakeFiles/Recipes.dir/mainwindow.cpp.obj	6b63e9a7be3e1be8
+2983	3195	7496257238021916	Recipes.exe	bb5eec1179a98088
