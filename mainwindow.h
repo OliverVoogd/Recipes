@@ -28,13 +28,19 @@ public slots:
     void saveRecipeFile();
     void addIngredientToRecipe();
 
+    // tab widget
+    void currentTabChanged(int current);
+
 private:
     // Pointers to ui elements
     Ui::MainWindow *ui;
+    QFrame *innerRecipeScroll;
 
     QString workingDir;
     IngredientIndex index;
 
     void setupScrollArea();
+
+    void loadIndex();
 };
 #endif // MAINWINDOW_H

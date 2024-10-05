@@ -12,6 +12,8 @@ void IngredientIndex::loadFile(QString dir) {
         QMessageBox::critical(parent, "Error", "Could not open file: " + filename);
         return;
     }
+
+    ingredients.clear();
     QTextStream in(&file);
 
     // process the file stream

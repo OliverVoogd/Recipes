@@ -19,12 +19,12 @@ public:
     qsizetype size() const { return ingredients.size(); };
 
     const Ingredient &operator[](qsizetype index) const { return ingredients[index]; }
-
+    const  Ingredient &at(qsizetype index) const { return this->operator[](index); }
     const QString getPlainText() const;
     void loadFile(QString dir);
     void saveToFile(QString indexText, QString dir);
 private:
-    QWidget *parent; // pointer to parent QWidget, used for displaying message boxes
+    QWidget *parent; // pointer to parent QWidget, used for displaying message boxes. Ultimately remove
     QVector<Ingredient> ingredients;
 };
 

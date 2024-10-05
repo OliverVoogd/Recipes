@@ -267,6 +267,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"D:/Windows/ProgrammingOffline/QT/Recipes/recipe.h",
+			"MU",
+			"EWIEGA46WW/moc_recipe.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -346,7 +352,8 @@
 			null
 		],
 		[ "D:/Windows/ProgrammingOffline/QT/Recipes/main.cpp", "MU", null ],
-		[ "D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.cpp", "MU", null ]
+		[ "D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.cpp", "MU", null ],
+		[ "D:/Windows/ProgrammingOffline/QT/Recipes/recipe.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

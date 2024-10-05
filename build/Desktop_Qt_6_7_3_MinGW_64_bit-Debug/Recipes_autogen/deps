@@ -549,5 +549,7 @@ Recipes_autogen/timestamp: \
 	D:/Windows/ProgrammingOffline/QT/Recipes/main.cpp \
 	D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.cpp \
 	D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h \
+	D:/Windows/ProgrammingOffline/QT/Recipes/recipe.cpp \
+	D:/Windows/ProgrammingOffline/QT/Recipes/recipe.h \
 	D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe

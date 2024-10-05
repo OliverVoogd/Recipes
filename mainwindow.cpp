@@ -1,13 +1,17 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
+#include "recipe.h"
+
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , index(this)
+    , workingDir(QString())
 {
     ui->setupUi(this);
 
@@ -22,11 +26,21 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnSaveRecipe, &QPushButton::clicked, this, &MainWindow::saveRecipeFile);
     connect(ui->btnAddIngredient, &QPushButton::clicked, this, &MainWindow::addIngredientToRecipe);
 
+    // Tab Widget
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &MainWindow::currentTabChanged);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::loadIndex() {
+    if (workingDir == "") {
+        QMessageBox::critical(this, "Index File", "Failed to load index file at " + workingDir);
+    }
+
+    index.loadFile(workingDir);
 }
 
 void MainWindow::openWorkingDir() {
@@ -38,8 +52,7 @@ void MainWindow::openWorkingDir() {
     if (dir != "") {
         workingDir = dir;
 
-        index.loadFile(workingDir);
-
+        loadIndex();
         ui->txtIndexFile->setPlainText(index.getPlainText());
     }
 }
@@ -53,14 +66,28 @@ void MainWindow::openNewRecipeFile() {
 }
 
 void MainWindow::openRecipeFile() {
-    if (workingDir == "") {
-        QMessageBox::critical(this, "Missing Index File", "Please open an Index file first");
-        return;
+    QString recipeFile = QFileDialog::getOpenFileName(this, "Open Recipe File", workingDir, "Text Files (*.txt)");
+    QFileInfo fInfo(recipeFile);
+    workingDir = fInfo.absolutePath();
+
+    // Load Index File
+    loadIndex();
+
+    ui->txtRecipeFileName->setText(recipeFile);
+
+    Recipe recipe(&index);
+    if (!recipe.loadRecipe(recipeFile)) {
+        QMessageBox::critical(this, "Error", "Could not load recipe file: " + recipeFile);
     }
 
-    QString recipeFile = QFileDialog::getOpenFileName(this, "Open Recipe File", workingDir, "Text Files (*.txt)");
-    ui->txtRecipeFileName->setText(recipeFile);
+    for (int i = 0; i < recipe.size(); i++) {
+        auto b = new QPushButton(innerRecipeScroll);
+        b->setText(recipe.at(i).type.name);
+        innerRecipeScroll->layout()->addWidget(b);
+    }
 }
+
+
 
 void MainWindow::saveRecipeFile() {
     QMessageBox::information(this, "missing func", "This function needs implementation");
@@ -70,15 +97,10 @@ void MainWindow::setupScrollArea() {
     QScrollArea *scroll = ui->scrollRecipeIngredients;
     scroll->setWidgetResizable(true);
 
-    QFrame *inner = new QFrame(scroll);
-    inner->setLayout(new QVBoxLayout());
+    innerRecipeScroll = new QFrame(scroll);
+    innerRecipeScroll->setLayout(new QVBoxLayout());
 
-    scroll->setWidget(inner);
-
-    auto b = new QPushButton(inner);
-    b->setText("Hello");
-    inner->layout()->addWidget(b);
-
+    scroll->setWidget(innerRecipeScroll);
     scroll->show();
 }
 void MainWindow::addIngredientToRecipe() {
@@ -89,4 +111,13 @@ void MainWindow::addIngredientToRecipe() {
     b->setText("Hello 2");
     inner->layout()->addWidget(b);
 
+}
+
+
+void MainWindow::currentTabChanged(int current) {
+    if (current == 0) {
+        // changed to the index tab
+        loadIndex();
+        ui->txtIndexFile->setPlainText(index.getPlainText());
+    }
 }
