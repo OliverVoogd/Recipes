@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 
 #include "recipe.h"
+#include "recipeingredientwidget.h"
 
 #include <QFileDialog>
 #include <QFileInfo>
@@ -12,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , index(this)
     , workingDir(QString())
+    , loadedRecipe(nullptr)
 {
     ui->setupUi(this);
 
@@ -33,6 +35,9 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete innerRecipeScroll;
+    delete loadedRecipe;
+
 }
 
 void MainWindow::loadIndex() {
@@ -75,14 +80,15 @@ void MainWindow::openRecipeFile() {
 
     ui->txtRecipeFileName->setText(recipeFile);
 
-    Recipe recipe(&index);
-    if (!recipe.loadRecipe(recipeFile)) {
+    delete loadedRecipe;
+    loadedRecipe = new Recipe(&index);
+    if (!loadedRecipe->loadRecipe(recipeFile)) {
         QMessageBox::critical(this, "Error", "Could not load recipe file: " + recipeFile);
     }
 
-    for (int i = 0; i < recipe.size(); i++) {
-        auto b = new QPushButton(innerRecipeScroll);
-        b->setText(recipe.at(i).type.name);
+    for (int i = 0; i < loadedRecipe->size(); i++) {
+        // TODO: add cleanup for these ui elements?
+        auto b = new RecipeIngredientWidget(this, &loadedRecipe->at(i));
         innerRecipeScroll->layout()->addWidget(b);
     }
 }
@@ -104,12 +110,9 @@ void MainWindow::setupScrollArea() {
     scroll->show();
 }
 void MainWindow::addIngredientToRecipe() {
-    QScrollArea *scroll = ui->scrollRecipeIngredients;
-    QWidget *inner = scroll->widget();
-
-    auto b = new QPushButton(inner);
-    b->setText("Hello 2");
-    inner->layout()->addWidget(b);
+    auto rIng = loadedRecipe->addBlankIngredient();
+    auto b = new RecipeIngredientWidget(this, &rIng);
+    innerRecipeScroll->layout()->addWidget(b);
 
 }
 

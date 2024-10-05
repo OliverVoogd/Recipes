@@ -28,10 +28,15 @@ bool Recipe::loadRecipe(QString recipeFile) {
 
         int ingIdx = rList[0].toInt();
         int ingQuant = rList[1].toInt();
-        items.push_back(RecipeIngredient(index->at(ingIdx), ingQuant));
+        items.push_back(RecipeIngredient(index, ingIdx, ingQuant));
     }
 
     file.close();
 
     return true;
+}
+
+RecipeIngredient &Recipe::addBlankIngredient() {
+    items.push_back(RecipeIngredient(index, 0, 0));
+    return items.back();
 }

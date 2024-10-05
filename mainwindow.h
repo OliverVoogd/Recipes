@@ -5,6 +5,7 @@
 #include <QListWidget>
 
 #include "ingredientindex.h"
+#include "recipe.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -38,6 +39,7 @@ private:
 
     QString workingDir;
     IngredientIndex index;
+    Recipe *loadedRecipe;
 
     void setupScrollArea();
 

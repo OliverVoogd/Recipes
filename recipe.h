@@ -6,10 +6,12 @@
 #include "ingredientindex.h"
 
 struct RecipeIngredient {
-    const Ingredient &type;
+    const IngredientIndex * const index;
+    int typeIndex;
     int quantity;
 
-    RecipeIngredient(const Ingredient &type, int quantity): type(type), quantity(quantity) {};
+    RecipeIngredient(const IngredientIndex * const index, int typeIndex, int quantity): index(index), typeIndex(typeIndex), quantity(quantity) {}
+    const Ingredient &type() const { return index->at(typeIndex); }
 };
 
 class Recipe
@@ -20,9 +22,11 @@ private:
 public:
     Recipe(IngredientIndex *index);
 
-    const RecipeIngredient &operator[](qsizetype index) const { return items[index]; }
-    const RecipeIngredient &at(qsizetype index) const { return this->operator[](index); }
+    RecipeIngredient &operator[](qsizetype index) { return items[index]; }
+    RecipeIngredient &at(qsizetype index) { return this->operator[](index); }
     const qsizetype size() const { return items.size(); }
+
+    RecipeIngredient &addBlankIngredient();
     bool loadRecipe(QString recipeFile);
 };
 

@@ -149,6 +149,7 @@ Recipes_autogen/timestamp: \
 	D:/Qt/6.7.3/mingw_64/include/QtGui/qvalidator.h \
 	D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QHBoxLayout \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget \
@@ -157,7 +158,11 @@ Recipes_autogen/timestamp: \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractslider.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qboxlayout.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qframe.h \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qgridlayout.h \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlayout.h \
+	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlayoutitem.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistview.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistwidget.h \
 	D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -551,5 +556,7 @@ Recipes_autogen/timestamp: \
 	D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h \
 	D:/Windows/ProgrammingOffline/QT/Recipes/recipe.cpp \
 	D:/Windows/ProgrammingOffline/QT/Recipes/recipe.h \
+	D:/Windows/ProgrammingOffline/QT/Recipes/recipeingredientwidget.cpp \
+	D:/Windows/ProgrammingOffline/QT/Recipes/recipeingredientwidget.h \
 	D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe
