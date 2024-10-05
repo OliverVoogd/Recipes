@@ -14,16 +14,17 @@ class IngredientIndex
 {
 public:
     IngredientIndex(QWidget *parent): parent(parent) {};
-    IngredientIndex(QWidget *parent, QString filename): parent(parent) { loadFile(filename); };
+    IngredientIndex(QWidget *parent, QString dir): parent(parent) { loadFile(dir); };
 
     qsizetype size() const { return ingredients.size(); };
 
     const Ingredient &operator[](qsizetype index) const { return ingredients[index]; }
 
     const QString getPlainText() const;
-    void loadFile(QString filename);
+    void loadFile(QString dir);
+    void saveToFile(QString indexText, QString dir);
 private:
-    QWidget *parent;
+    QWidget *parent; // pointer to parent QWidget, used for displaying message boxes
     QVector<Ingredient> ingredients;
 };
 

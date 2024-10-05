@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QListWidget>
 
 #include "ingredientindex.h"
 
@@ -22,9 +23,15 @@ public:
 public slots:
     void openWorkingDir();
     void saveIndexFile();
+    void openNewRecipeFile();
+    void openRecipeFile();
+    void saveRecipeFile();
 
 private:
+    // Pointers to ui elements
     Ui::MainWindow *ui;
+    QListWidget *recipeList;
+
     QString workingDir;
     IngredientIndex index;
 };

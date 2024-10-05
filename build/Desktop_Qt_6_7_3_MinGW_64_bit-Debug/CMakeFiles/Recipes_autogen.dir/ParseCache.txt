@@ -7,6 +7,7 @@ D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20memory.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20type_traits.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q23utility.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qalgorithms.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qanystringview.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qarraydata.h
@@ -48,11 +49,13 @@ D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qhash.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qhashfunctions.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiodevicebase.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiterable.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qiterator.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qline.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlist.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlocale.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qlogging.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qmalloc.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qmap.h
@@ -73,6 +76,7 @@ D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qprocessordetection.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qrect.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qrefcount.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qregularexpression.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qscopedpointer.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qscopeguard.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/qset.h
@@ -144,12 +148,27 @@ D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtGui/qtguiexports.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtGui/qtguiglobal.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtGui/qtransform.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtGui/qvalidator.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QListWidget
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QMainWindow
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/QWidget
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractitemview.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qabstractspinbox.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qframe.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistview.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qlistwidget.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qmainwindow.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qrubberband.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qslider.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qstyle.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtabbar.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:D:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h
@@ -357,7 +376,6 @@ D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/moc_predefs.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/ingredientindex.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
-D:/Windows/ProgrammingOffline/QT/Recipes/main.cpp
 D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.h
  mmc:Q_OBJECT
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h
@@ -709,6 +727,7 @@ D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/moc_predefs.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.h
+D:/Windows/ProgrammingOffline/QT/Recipes/main.cpp
 D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.cpp
  uic:./ui_mainwindow.h
 D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.cpp

@@ -11,8 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
@@ -42,10 +45,13 @@ public:
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_3;
-    QPushButton *btnOpenRecipe;
+    QPushButton *btnOpenNewRecipe;
+    QPushButton *btnEditRecipe;
     QSpacerItem *horizontalSpacer_2;
+    QLineEdit *txtRecipeFileName;
     QLabel *indexLabel_2;
-    QPlainTextEdit *txtRecipeFile;
+    QListWidget *lstRecipeView;
+    QComboBox *comboBox;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *btnSaveRecipe;
     QWidget *ShoppingView;
@@ -113,14 +119,26 @@ public:
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
-        btnOpenRecipe = new QPushButton(verticalLayoutWidget_2);
-        btnOpenRecipe->setObjectName("btnOpenRecipe");
+        btnOpenNewRecipe = new QPushButton(verticalLayoutWidget_2);
+        btnOpenNewRecipe->setObjectName("btnOpenNewRecipe");
 
-        horizontalLayout_3->addWidget(btnOpenRecipe);
+        horizontalLayout_3->addWidget(btnOpenNewRecipe);
+
+        btnEditRecipe = new QPushButton(verticalLayoutWidget_2);
+        btnEditRecipe->setObjectName("btnEditRecipe");
+
+        horizontalLayout_3->addWidget(btnEditRecipe);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer_2);
+
+        txtRecipeFileName = new QLineEdit(verticalLayoutWidget_2);
+        txtRecipeFileName->setObjectName("txtRecipeFileName");
+        txtRecipeFileName->setEnabled(true);
+        txtRecipeFileName->setReadOnly(true);
+
+        horizontalLayout_3->addWidget(txtRecipeFileName);
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
@@ -130,10 +148,20 @@ public:
 
         verticalLayout_2->addWidget(indexLabel_2);
 
-        txtRecipeFile = new QPlainTextEdit(verticalLayoutWidget_2);
-        txtRecipeFile->setObjectName("txtRecipeFile");
+        lstRecipeView = new QListWidget(verticalLayoutWidget_2);
+        lstRecipeView->setObjectName("lstRecipeView");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(lstRecipeView->sizePolicy().hasHeightForWidth());
+        lstRecipeView->setSizePolicy(sizePolicy);
 
-        verticalLayout_2->addWidget(txtRecipeFile);
+        verticalLayout_2->addWidget(lstRecipeView);
+
+        comboBox = new QComboBox(verticalLayoutWidget_2);
+        comboBox->setObjectName("comboBox");
+
+        verticalLayout_2->addWidget(comboBox);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
@@ -153,7 +181,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -166,7 +194,9 @@ public:
         indexLabel->setText(QCoreApplication::translate("MainWindow", "Edit Index", nullptr));
         btnSaveIndex->setText(QCoreApplication::translate("MainWindow", "Save Index", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(IndexView), QCoreApplication::translate("MainWindow", "Index", nullptr));
-        btnOpenRecipe->setText(QCoreApplication::translate("MainWindow", "Edit Recipe File", nullptr));
+        btnOpenNewRecipe->setText(QCoreApplication::translate("MainWindow", "New Recipe", nullptr));
+        btnEditRecipe->setText(QCoreApplication::translate("MainWindow", "Edit Recipe File", nullptr));
+        txtRecipeFileName->setPlaceholderText(QString());
         indexLabel_2->setText(QCoreApplication::translate("MainWindow", "Edit Recipe File", nullptr));
         btnSaveRecipe->setText(QCoreApplication::translate("MainWindow", "Save Recipe", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(RecipeView), QCoreApplication::translate("MainWindow", "Recipe", nullptr));

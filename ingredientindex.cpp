@@ -36,7 +36,7 @@ void IngredientIndex::loadFile(QString dir) {
 const QString IngredientIndex::getPlainText() const {
     QString out;
 
-    for (const auto ing : ingredients) {
+    for (const auto &ing : ingredients) {
         out += ing.name + "," + ing.unit + "\n";
     }
 
