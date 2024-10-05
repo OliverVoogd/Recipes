@@ -11,14 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -49,9 +48,12 @@ public:
     QPushButton *btnEditRecipe;
     QSpacerItem *horizontalSpacer_2;
     QLineEdit *txtRecipeFileName;
+    QHBoxLayout *horizontalLayout_6;
     QLabel *indexLabel_2;
-    QListWidget *lstRecipeView;
-    QComboBox *comboBox;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *btnAddIngredient;
+    QScrollArea *scrollRecipeIngredients;
+    QWidget *scrollRecipeContentsWidget;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *btnSaveRecipe;
     QWidget *ShoppingView;
@@ -143,25 +145,34 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_3);
 
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName("horizontalLayout_6");
         indexLabel_2 = new QLabel(verticalLayoutWidget_2);
         indexLabel_2->setObjectName("indexLabel_2");
 
-        verticalLayout_2->addWidget(indexLabel_2);
+        horizontalLayout_6->addWidget(indexLabel_2);
 
-        lstRecipeView = new QListWidget(verticalLayoutWidget_2);
-        lstRecipeView->setObjectName("lstRecipeView");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lstRecipeView->sizePolicy().hasHeightForWidth());
-        lstRecipeView->setSizePolicy(sizePolicy);
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        verticalLayout_2->addWidget(lstRecipeView);
+        horizontalLayout_6->addItem(horizontalSpacer_3);
 
-        comboBox = new QComboBox(verticalLayoutWidget_2);
-        comboBox->setObjectName("comboBox");
+        btnAddIngredient = new QPushButton(verticalLayoutWidget_2);
+        btnAddIngredient->setObjectName("btnAddIngredient");
 
-        verticalLayout_2->addWidget(comboBox);
+        horizontalLayout_6->addWidget(btnAddIngredient);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_6);
+
+        scrollRecipeIngredients = new QScrollArea(verticalLayoutWidget_2);
+        scrollRecipeIngredients->setObjectName("scrollRecipeIngredients");
+        scrollRecipeIngredients->setWidgetResizable(true);
+        scrollRecipeContentsWidget = new QWidget();
+        scrollRecipeContentsWidget->setObjectName("scrollRecipeContentsWidget");
+        scrollRecipeContentsWidget->setGeometry(QRect(0, 0, 737, 383));
+        scrollRecipeIngredients->setWidget(scrollRecipeContentsWidget);
+
+        verticalLayout_2->addWidget(scrollRecipeIngredients);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
@@ -198,6 +209,7 @@ public:
         btnEditRecipe->setText(QCoreApplication::translate("MainWindow", "Edit Recipe File", nullptr));
         txtRecipeFileName->setPlaceholderText(QString());
         indexLabel_2->setText(QCoreApplication::translate("MainWindow", "Edit Recipe File", nullptr));
+        btnAddIngredient->setText(QCoreApplication::translate("MainWindow", "Add Ingredient", nullptr));
         btnSaveRecipe->setText(QCoreApplication::translate("MainWindow", "Save Recipe", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(RecipeView), QCoreApplication::translate("MainWindow", "Recipe", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(ShoppingView), QCoreApplication::translate("MainWindow", "Shopping List", nullptr));

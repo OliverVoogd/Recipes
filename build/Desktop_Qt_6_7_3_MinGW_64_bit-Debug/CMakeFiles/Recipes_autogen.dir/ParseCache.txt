@@ -376,6 +376,7 @@ D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/moc_predefs.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/ingredientindex.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.h
+D:/Windows/ProgrammingOffline/QT/Recipes/main.cpp
 D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.h
  mmc:Q_OBJECT
  mdp:D:/Qt/6.7.3/mingw_64/include/QtCore/q20functional.h
@@ -727,7 +728,6 @@ D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/Recipes_autogen/moc_predefs.h
  mdp:D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.h
-D:/Windows/ProgrammingOffline/QT/Recipes/main.cpp
 D:/Windows/ProgrammingOffline/QT/Recipes/mainwindow.cpp
  uic:./ui_mainwindow.h
 D:/Windows/ProgrammingOffline/QT/Recipes/shoppinglist.cpp

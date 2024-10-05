@@ -7,7 +7,6 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , recipeList(ui->lstRecipeView)
     , index(this)
 {
     ui->setupUi(this);
@@ -17,9 +16,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnSaveIndex, &QPushButton::clicked, this, &MainWindow::saveIndexFile);
 
     // Recipe tab
+    setupScrollArea();
     connect(ui->btnEditRecipe, &QPushButton::clicked, this, &MainWindow::openRecipeFile);
     connect(ui->btnOpenNewRecipe, &QPushButton::clicked, this, &MainWindow::openNewRecipeFile);
     connect(ui->btnSaveRecipe, &QPushButton::clicked, this, &MainWindow::saveRecipeFile);
+    connect(ui->btnAddIngredient, &QPushButton::clicked, this, &MainWindow::addIngredientToRecipe);
+
 }
 
 MainWindow::~MainWindow()
@@ -62,4 +64,29 @@ void MainWindow::openRecipeFile() {
 
 void MainWindow::saveRecipeFile() {
     QMessageBox::information(this, "missing func", "This function needs implementation");
+}
+
+void MainWindow::setupScrollArea() {
+    QScrollArea *scroll = ui->scrollRecipeIngredients;
+    scroll->setWidgetResizable(true);
+
+    QFrame *inner = new QFrame(scroll);
+    inner->setLayout(new QVBoxLayout());
+
+    scroll->setWidget(inner);
+
+    auto b = new QPushButton(inner);
+    b->setText("Hello");
+    inner->layout()->addWidget(b);
+
+    scroll->show();
+}
+void MainWindow::addIngredientToRecipe() {
+    QScrollArea *scroll = ui->scrollRecipeIngredients;
+    QWidget *inner = scroll->widget();
+
+    auto b = new QPushButton(inner);
+    b->setText("Hello 2");
+    inner->layout()->addWidget(b);
+
 }

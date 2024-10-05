@@ -26,13 +26,15 @@ public slots:
     void openNewRecipeFile();
     void openRecipeFile();
     void saveRecipeFile();
+    void addIngredientToRecipe();
 
 private:
     // Pointers to ui elements
     Ui::MainWindow *ui;
-    QListWidget *recipeList;
 
     QString workingDir;
     IngredientIndex index;
+
+    void setupScrollArea();
 };
 #endif // MAINWINDOW_H

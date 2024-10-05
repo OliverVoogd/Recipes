@@ -147,24 +147,52 @@
         </layout>
        </item>
        <item>
-        <widget class="QLabel" name="indexLabel_2">
-         <property name="text">
-          <string>Edit Recipe File</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="indexLabel_2">
+           <property name="text">
+            <string>Edit Recipe File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnAddIngredient">
+           <property name="text">
+            <string>Add Ingredient</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QListWidget" name="lstRecipeView">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+        <widget class="QScrollArea" name="scrollRecipeIngredients">
+         <property name="widgetResizable">
+          <bool>true</bool>
          </property>
+         <widget class="QWidget" name="scrollRecipeContentsWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>737</width>
+            <height>383</height>
+           </rect>
+          </property>
+         </widget>
         </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
